@@ -1,0 +1,36 @@
+programa {
+    funcao inicio() {
+        inteiro vetor[10], i, soma = 0
+        real media
+
+        // Leitura dos 10 números inteiros
+        escreva("Digite 10 números inteiros:\n")
+        para (i = 0; i < 10; i++) {
+            leia(vetor[i])
+        }
+
+        // Exibir elementos nos índices ímpares
+        escreva("\nElementos nos índices ímpares: ")
+        para (i = 1; i < 10; i += 2) {
+            escreva(vetor[i], " ")
+        }
+
+        // Exibir elementos pares
+        escreva("\nElementos pares: ")
+        para (i = 0; i < 10; i++) {
+            se (vetor[i] % 2 == 0) {
+                escreva(vetor[i], " ")
+            }
+        }
+
+        // Cálculo da soma e média
+        para (i = 0; i < 10; i++) {
+            soma += vetor[i]
+        }
+
+        media = soma / 10.0 // Forçar divisão real
+
+        escreva("\nSoma: ", soma)
+        escreva("\nMédia: ", media, "\n")
+    }
+}
