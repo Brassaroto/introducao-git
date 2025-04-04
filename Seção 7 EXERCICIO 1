@@ -1,0 +1,40 @@
+algoritmo "OrdenarVetor"
+var
+    vetor: vetor[10] de inteiro
+    i, j, maior, temp: inteiro
+inicio
+    // Definição dos valores do vetor
+    vetor[0] <- 2
+    vetor[1] <- 5
+    vetor[2] <- 1
+    vetor[3] <- 3
+    vetor[4] <- 4
+    vetor[5] <- 9
+    vetor[6] <- 7
+    vetor[7] <- 8
+    vetor[8] <- 10
+    vetor[9] <- 6
+
+    // Algoritmo de ordenação por seleção (Selection Sort) para ordem decrescente
+    para i de 0 ate 8 faca
+        maior <- i
+        para j de i+1 ate 9 faca
+            se vetor[j] > vetor[maior] entao
+                maior <- j
+            fimse
+        fimpara
+
+        // Troca os elementos de posição
+        se maior <> i entao
+            temp <- vetor[i]
+            vetor[i] <- vetor[maior]
+            vetor[maior] <- temp
+        fimse
+    fimpara
+
+    // Exibir o vetor ordenado
+    escreva("Vetor ordenado em ordem decrescente: ")
+    para i de 0 ate 9 faca
+        escreva(vetor[i], " ")
+    fimpara
+fimalgoritmo
